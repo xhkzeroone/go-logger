@@ -1,0 +1,22 @@
+<patterns>
+    <pattern>
+        <type>email</type>
+        <regex>[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}</regex>
+        <replacement>**@**.***</replacement>
+    </pattern>
+    <pattern>
+        <type>phone</type>
+        <regex>\d{3}-\d{3}-\d{4}</regex>
+        <replacement>*-***-**</replacement>
+    </pattern>
+    <pattern>
+        <type>phone_international</type>
+        <regex>\+84\d{9,10}</regex>
+        <replacement>+84*********</replacement>
+    </pattern>
+    <pattern>
+        <type>creditCard</type>
+        <regex>\d{4}-\d{4}-\d{4}-\d{4}</regex>
+        <replacement>**-****-****-**</replacement>
+    </pattern>
+</patterns>

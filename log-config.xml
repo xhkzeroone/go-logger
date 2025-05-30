@@ -1,0 +1,5 @@
+<logConfig>
+    <timestampFormat>2006-01-02 15:04:05</timestampFormat>
+    <pattern>%timestamp% | %level% | %requestId% | %file%:%line% | %function% |%message%</pattern>
+    <level>info</level>
+</logConfig>
