@@ -2,10 +2,11 @@ package logger
 
 import (
 	"fmt"
-	"github.com/sirupsen/logrus"
 	"path"
 	"regexp"
 	"strings"
+
+	"github.com/sirupsen/logrus"
 )
 
 type FunctionNameFormatter interface {

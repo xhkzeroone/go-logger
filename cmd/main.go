@@ -18,7 +18,14 @@ func main() {
 	log := logger.WithContext(ctx)
 	log.Info("Ứng dụng đã khởi động")
 	logger.Log.WithField("logger", "main").Info("Ứng dụng đã khởi động")
-	logger.Log.WithField("logger", "main").Info("+84225898023")
+
+	// Set formatter JSON có mask
+	logger.Log.SetFormatter(&logger.JSONFormatter{
+		TimestampFormat:       "2006-01-02 15:04:05",
+		MsgFormatter:          logger.GetMessageFormater(),
+		FunctionNameFormatter: logger.GetFunctionNameFormatter(),
+	})
+	logger.Log.WithField("logger", "main").WithField("requestId", "UUID").Info("+84225898023")
 
 	someFunc()
 }
